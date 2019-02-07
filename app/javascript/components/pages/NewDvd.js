@@ -1,6 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Redirect } from 'react-router-dom'
+import {
+  Redirect,
+  Link
+ } from 'react-router-dom'
 
 class NewDvd extends React.Component {
   constructor(props){
@@ -43,7 +46,6 @@ render () {
         {responseOK &&
           <Redirect to='/all-dvds'/>
         }
-        {!responseOK &&
           <div>
             <h1>Add a DVD you'd like to fetch</h1>
             <form
@@ -76,7 +78,7 @@ render () {
               <button type='submit'>Add</button>
             </form>
           </div>
-        }
+        <Link to="./all-dvds">Back</Link>
       </div>
     );
   }

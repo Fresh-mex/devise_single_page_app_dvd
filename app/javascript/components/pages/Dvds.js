@@ -1,5 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
+import {
+  Link
+} from "react-router-dom"
 
 class Dvds extends React.Component {
   constructor(props){
@@ -20,7 +23,7 @@ class Dvds extends React.Component {
   render () {
     return (
       <div>
-        <h1>My DVDs</h1>
+        <h1>My DVD's</h1>
         <table>
           <tbody>
             <tr>
@@ -39,6 +42,7 @@ class Dvds extends React.Component {
             })}
           </tbody>
         </table>
+        <Link to="./new-dvd">Add new Dvd</Link>
       </div>
     );
   }
